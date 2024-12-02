@@ -38,8 +38,8 @@
     --COBALT-BLUE: hsl(234, 85%, 45%);
 
     /* GRADIENT COLORS */
-    --BG-LIGHT-SLATE-BLUE: hsl(252, 100%, 67%);
-    --BG-LIGHT-ROYAL-BLUE: hsl(241, 81%, 54%);
+    --BG-SBLUE: hsl(252, 100%, 67%);
+    --BG-RBLUE: hsl(241, 81%, 54%);
     --CIRCLE-VIOLET-BLUE: hsla(256, 72%, 46%, 1);
     --CIRCLE-PERSIAN-BLUE: hsla(241, 72%, 46%, 0);
 
@@ -47,8 +47,129 @@
     --WHITE: hsl(0, 0%, 100%);
     --PALE-BLUE: hsl(221, 100%, 96%);
     --LIGHT-LAVENDER: hsl(241, 100%, 89%);
-    --Dark-GRAY-BLUE: hsl(224, 30%, 27%);
+    --DARK-GRAY-BLUE: hsl(224, 30%, 27%);
 }
 
 /* || UTILITY CLASSES */
+.center {
+    text-align: center;
+    padding: 4px;
+    color: var(--WHITE);
+}
 /* || GENERAL STYLES */
+
+body {
+    font-family: "Hanken Grotesk", monospace;
+
+}
+main {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+}
+
+p { font-size: 16px;}
+/* p { font-size: clamp(16px 2.2vh 18px);} */
+
+article {
+    width: 320px;
+    height: auto;
+    padding: 24px;
+}
+
+
+.result {
+    background: linear-gradient(var(--BG-SBLUE), var(--BG-RBLUE));
+    border-radius: 0 0 20px 20px;
+}
+.result__heading {
+    color: var(--LIGHT-LAVENDER);
+    text-align: center;
+    margin: 0 auto 16px;
+}
+
+.result__circle {
+    background: linear-gradient(var(--CIRCLE-VIOLET-BLUE), var(--CIRCLE-PERSIAN-BLUE));
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 150px;
+    height: 150px;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    margin: 0 auto 16px;
+}
+.result__circle h1 {
+    color: var(--WHITE);
+    font-weight: 800;
+    font-size: 48px;
+}
+.result__circle p {
+    color: var(--LIGHT-LAVENDER);
+    font-weight: 500;
+}
+
+.result__info {
+    color: var(--LIGHT-LAVENDER);
+    font-weight: 500;
+    white-space: wrap;
+}
+
+
+
+
+
+.summary {
+    background-color: var(--WHITE);
+}
+
+
+
+
+
+
+
+/* || MEDIA QUERIES 
+ || SMALL 
+ @media screen and (min-width: 576px) {
+    body {
+      background-color: green;
+      background-image: radial-gradient(whitesmoke, green)
+    }
+    nav {
+      display: none;
+    }
+  }
+  
+  /* || MEDIUM 
+  @media screen and (min-width: 768px) {
+    body {
+      background-color: gold;
+      background-image: radial-gradient(whitesmoke, gold)
+    }
+  }
+  
+  /* || LARGE 
+  @media screen and (min-width: 992px) {
+    body {
+      background-color: firebrick;
+      background-image: radial-gradient(whitesmoke, firebrick)
+    }
+  }
+  
+  /* || XL  
+  @media screen and (min-width: 1200px) {
+    body {
+      background-color: rebeccapurple;
+      background-image: radial-gradient(whitesmoke, rebeccapurple)
+    }
+  }
+
+*/
+  
