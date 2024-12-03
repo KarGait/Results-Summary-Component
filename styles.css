@@ -63,6 +63,7 @@ body {
 
 }
 main {
+    position: absolute;
     display: flex;
     /* align-items: center; */
     justify-content: center;
@@ -70,6 +71,7 @@ main {
     flex-wrap: wrap;
     width: 100%;
     height: 100vh;
+    background-color: var(--PALE-BLUE);
 }
 
 p { font-size: 16px;}
@@ -78,13 +80,18 @@ p { font-size: 16px;}
 article {
     width: 320px;
     height: auto;
-    padding: 24px;
+    padding: 16px;
 }
 
 
 .result {
     background: linear-gradient(var(--BG-SBLUE), var(--BG-RBLUE));
-    border-radius: 0 0 20px 20px;
+    border-radius:20px;
+    position: relative;
+    z-index: 1;
+    margin-top: -15px;
+
+
 }
 .result__heading {
     color: var(--LIGHT-LAVENDER);
@@ -126,14 +133,88 @@ article {
 
 
 .summary {
+    position: relative;
+    /* margin-left: -10px; */
+    margin-top: -15px;
     background-color: var(--WHITE);
+    border-radius: 20px;
+}
+.summary__container {
+    margin-top: 15px;
 }
 
+.summary__heading {
+    font-weight: 500;
+}
 
+ol {
+    list-style: none;
+}
 
+li{
+    display: block;
+    width: 100%;
+    line-height: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 8px auto;
+    padding-right: 8px;
+    /* border: 1px solid rebeccapurple; */
+    border-radius: 10px;
+}
 
+.summary__fig {
+    display: flex;
+    align-items: center;
+} 
 
+.summary__fig,
+.summary__fig figcaption{
+    padding-left: 8px;
+}
 
+/* .summary__reaction {
+    background: var(--LIGHT-RED);
+    opacity: 0.1;
+} */
+
+.reaction {
+    color: var(--LIGHT-RED);
+}
+
+.memory {
+    color: var(--ORANGEY-YELLOW);
+}
+
+.verbal {
+    color: var(--GREEN-TEAL);
+}
+
+.visual {
+    color: var(--COBALT-BLUE);
+}
+
+button {
+    background-color: var(--DARK-GRAY-BLUE);
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1em;
+    font: inherit;
+    color: var(--WHITE);
+    line-height: 1.5em;
+    padding: 0.5em;
+    border-radius: 30px;
+    border: none;
+    /* outline: none; */
+}
+
+button:hover, button:active {
+    cursor: pointer;
+    background-color: var(--BG-RBLUE);
+}
 
 /* || MEDIA QUERIES 
  || SMALL 
